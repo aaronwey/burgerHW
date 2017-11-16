@@ -1,0 +1,63 @@
+body{
+    background-image: url('http://www.themesltd.com/iphone-img/cute_happy_burgers.png');
+    font-family: 'Quicksand', sans-serif;
+    /*color: #835124;*/
+}
+
+.jumbotron{
+    background-color: #000000;
+    color: gray;
+}
+
+h1, h2, label, li{
+    color: #FFFFFF;
+}
+
+#ca {
+    height: 80px;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+li{
+    font-size: 15px;
+}
+
+.row{
+	margin-top: 15%;
+}
+
+#burgerMenu{
+	float: left;
+	padding: 5%;
+	background: #32de28;
+
+}
+
+#main{
+	position: relative;
+}
+
+#burgerName{
+	float: left;
+	background: #32de28;
+}
+
+#eatenBurgers{
+	float: left;
+	width: 100%;
+	margin-left: 9%;
+	background: #32de28;
+	padding: 5%;
+}
+
+#addBurger{
+	margin-bottom: 4%;
+}
+
+#eatBtn{
+	margin-top: 6%;
+	margin-bottom: 6%;
+}
