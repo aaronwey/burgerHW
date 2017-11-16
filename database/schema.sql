@@ -1,19 +1,17 @@
-
-CREATE DATABASE burgers_db;
-
-USE burgers_db;
-
-DROP TABLE IF EXISTS burgers;
+USE u6bhrkg393e8c38f;
 
 CREATE TABLE burgers (
-    id INT(30) NOT NULL AUTO_INCREMENT,
+    id INT AUTO_INCREMENT NOT NULL,
     burger_name VARCHAR(50) NOT NULL,
     devoured tinyint(1) NOT NULL DEFAULT "0",
-    date TIMESTAMP NOT NULL,
-    PRIMARY KEY (id)
+    createdAt TIMESTAMP NOT NULL,
+    PRIMARY KEY(id)
 );
 
 SELECT * FROM burgers;
 
-
-       
+INSERT INTO burgers (burger_name, devoured)
+VALUES ("Delishy Burg-Town", false),
+       ("the David Cronenburger", false),
+       ("Burger She Wrote", false),
+       ("Burger-pocolypse", true);
