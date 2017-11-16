@@ -1,57 +1,50 @@
 <div class = "container" id = "main">
-    <div class="row">
-        <div class="col-xs-4 col-md-4 col-lg-4">
-            <div id="burgerMenu">
-                <h2 class="text-center">Burgers On the Menu</h2>
-                <ul class= "col-md-offset-2">
-                    {{#each burgers}} 
-                    {{#unless this.devoured}}
-                    <li>
-                        {{this.burger_name}}
-                        <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
-                            <button class="btn btn-primary col-md-offset-2" id="eatBtn" type="submit">EAT!</button>
-                        </form>
-                    </li>
-                    {{/unless}}
-                    {{/each}}
-                </ul>
+   <div class="row">
+      <div class="col-xs-4 col-md-4 col-lg-4">
+         <div id="burgerMenu">
+            <h2 class="text-center">Burgers On the Menu</h2>
+            <ul class= "col-md-offset-2">
+               {{#each burgers}} 
+               {{#unless this.devoured}}
+               <li>
+                  {{this.burger_name}}
+                  <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+                     <button class="btn btn-primary col-md-offset-2" id="eatBtn" type="submit">EAT!</button>
+                  </form>
+               </li>
+               {{/unless}}
+               {{/each}}
+            </ul>
+         </div>
+      </div>
+      <div class="col-xs-4 col-md-4 col-lg-4" id = "burgerName">
+         <h2 class="text-center">It's Burger Time!</h2>
+         <form class="create-update-form" action="burgers/create" method="POST">
+            <div class="form-group">
+               <label for="ca">Burger name:</label>
+               <input type="text" id="ca" name="name" placeholder="What burger would you like to see on the menu?">
             </div>
-        </div>
-        <div class="col-xs-4 col-md-4 col-lg-4" id = "burgerName">
-            
-                <h2 class="text-center">It's Burger Time!</h2>
-                <form class="create-update-form" action="burgers/create" method="POST">
-               
-                    <div class="form-group">
-                        <label for="ca">Burger name:</label>
-                        <input type="text" id="ca" name="name" placeholder="What burger would you like to see on the menu?">
-                    </div>
-                    <button class="btn btn-primary col-md-offset-4" id= "addBurger" type="submit">Add Burger</button>
-                </form>
-            
-        </div>
-        <div class="col-xs-4 col-md-4 col-lg-4">
-            <div id = "eatenBurgers">
-                <h2 class="text-center">Eaten Burgers</h2>
-                <ul>
-                    {{#each burgers}} 
-                    {{#if this.devoured}}
-                    <li>
-                        {{this.burger_name}}
-                    </li>
-                    {{/if}} 
-                    {{/each}}
-                </ul>
-            </div>
-        </div>
- 
-    </div>
-
-    <div class="row">
-
-
-        <div class="text-center col-xs-4 col-md-4">
-            <img class="img-responsive" id="burger-picture" src="/assets/images/burger.jpg">
-        </div>
-    </div>
+            <button class="btn btn-primary col-md-offset-4" id= "addBurger" type="submit">Add Burger</button>
+         </form>
+      </div>
+      <div class="col-xs-4 col-md-4 col-lg-4">
+         <div id = "eatenBurgers">
+            <h2 class="text-center">Eaten Burgers</h2>
+            <ul>
+               {{#each burgers}} 
+               {{#if this.devoured}}
+               <li>
+                  {{this.burger_name}}
+               </li>
+               {{/if}} 
+               {{/each}}
+            </ul>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="text-center col-xs-4 col-md-4">
+         <img class="img-responsive" id="burger-picture" src="/assets/images/burger.jpg">
+      </div>
+   </div>
 </div>
